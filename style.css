@@ -1,69 +1,241 @@
-*{
-    padding: 0;
+* {
+    font-family: 'Montserrat', 'roboto';
     margin: 0;
-    box-sizing: border-box;
-    }
-
-
-body {
-    background-color: antiquewhite;
+    padding: 0;
 }
-/* the main container */
 
-/* .front-side,
-.back-side {
-  width: 390px;
-  height: 220px;
+
+img {
+    width: 100%;
+    height: auto;
+}
+/* 
+/* NAVBAR CSS */
+
+nav{
+  
+  grid-area:nav;
+  justify-content: center;
+  text-align:center;
+  padding-left:1.5em;
+  padding-right: 1.5em;
+  padding-top:1.5em;
+  max-width:100%;
+}
+
+
+nav ul{
+  margin: 10px
+  padding:0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 17px;
+
   position: relative;
-  /* adjust this to space out the cards 
-  margin: 20px auto;
-  overflow: hidden;
-  box-shadow: 2px 5px 15px 0px #17161694;
-  background-color:antiquewhite;
-}*/
-
-/* .front-side{
-  background-image: url('cloud.svg'); */
 }
 
-.name{
-  display: grid;
-  position: relative;
-  margin-left:30px;
-  padding: 10px
-
+nav a{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 12px;
 }
 
-.secondary{
-  display: grid;
-  position: relative;
-  margin-left:30px;
-
-}
-
-.icon-container{
-  transform: scale(.6);
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "a b c";
+nav a:hover{
+  color:rgb(255, 0, 149);
   
 }
 
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color:rgb(255, 0, 149);
 
+  position: absolute;
+  top: 0;
+  width: 0%;
 
-/* .circle{
-  background-image: url("/assets/circle.svg");
-  grid-area: a;
-} */
-
-
-/* h3{
-  margin-bottom: 0px;
+  transition: all ease-in-out 250ms
 }
 
-h5{
-  margin-top: 0px;
-  padding-top: 0px;
-} */
+nav a:hover::before {
+  width:100%;
+
+}
+
+
+
+  /* HEADER CSS */
+.header {
+    position: relative;
+    background-image: url(/images/ash-painting.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+
+.welcome{
+    margin-top: 25vh;
+    text-align: center;
+    font-weight: 500;
+    font-size:1.75em;
+    color: white;
+    font-family: Montserrat;
+  }
+    
+
+#changingword {
+    color:rgb(255, 0, 149);
+      } 
+
+/* IMAGE GALLERY CSS */
+.image-gallery {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding-top: 200px;
+    grid-template-areas:
+    ". a b c ."
+    ". d e f ."
+    ;
+}
+
+.box-styling {
+    height: 350px;
+    background-color: rgb(110, 110, 110);
+}
+
+.box1 {
+    grid-area: a;
+}
+
+.box2 {
+    grid-area: b;
+}
+
+.box3 {
+    grid-area: c;
+}
+
+.box4 {
+    grid-area: d;
+}
+
+.box5 {
+    grid-area: e;
+}
+
+.box6 {
+    grid-area: f;
+}
+
+.bigText {
+    font-size: 2em;
+    padding-right: .5ch;
+}
+
+
+
+
+
+   /* footer section */
+   footer{
+    grid-area:footer;
+  }
+  footer p{
+    font-size:2em;
+  }
+  footer li {
+    display:inline;
+  }
+  footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li{
+    list-style: none;
+    align-self:flex-end;
+  }
+  footer ul li a {
+    text-decoration:none;
+    color: black;
+    opacity:.6;
+    transition: .3s;
+  }
+  footer ul li a:hover {
+    text-decoration:none;
+    color:rgb(255, 0, 149);
+  }
+  footer svg {
+    width:20%;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+
+
+  /* MEDIA QUERY FOR SMALL SCREENS */
+ @media (max-width:1100px){
+    .image-gallery {
+        margin-bottom: 800px;
+        grid-template-columns: 1fr minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+        grid-template-areas:
+        ". a b ."
+        ". c d ."
+        ". e f ."
+        ;
+    }
+ }
+
+/* MEDIA QUERY FOR MOBILE */
+ @media (max-width:735px){
+     nav {
+         padding-left: 0;
+     }
+
+    .image-gallery {
+        padding-bottom: 200%;
+        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+        grid-template-areas:
+        ".a."
+        ".b."
+        ".c."
+        ".d."
+        ".e."
+        ".f."
+        ;
+    }
+
+    .contact {
+        padding-bottom: 200%;
+        grid-template-columns: 3fr minmax(2fr, 1fr) 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". title ."
+        ". logo ."
+        ". wrapper ."
+        ;
+    }
+    
+ }
+
+
+
