@@ -1,0 +1,192 @@
+*{
+    /* border:2px green dashed; */
+    margin:0px;
+    padding:0px; 
+  }
+  
+  
+  
+  body{
+     margin-left: 10px;
+     margin-right: 10px;
+      font-family: 'Montserrat', sans-serif;
+      min-width:100%;
+  }
+  
+  /* what contains everything on the page */
+  .container{
+    /* margin-right:3em; */
+     min-width:100%; 
+    /* width:525px;  */
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+          "icon"
+          "nav"
+          "image"
+          "content"
+          "footer";
+  }
+  
+  /* step one: name your sections */
+  /* the sections of my about me page */
+  .icon,
+   nav,
+   .content,
+   footer{
+     padding-left: 1em;
+     padding-right: 1em;
+     text-align: center;
+  }
+  
+  .icon svg {
+    width:25%;
+    padding-bottom: 15px;
+    
+  }
+  
+   
+    
+  /* navigation bar styling */
+  
+  nav{
+    
+    grid-area:nav;
+    justify-content: center;
+    text-align:center;
+    padding-left:1.5em;
+    padding-right: 1.5em;
+    max-width:100%;
+  }
+  
+  
+  nav ul{
+    margin: 10px
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 17px;
+  
+    position: relative;
+  }
+  
+  nav a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+  }
+  
+  nav a:hover{
+    color:rgb(255, 0, 149);
+    
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color:rgb(255, 0, 149);
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms
+  }
+  
+  nav a:hover::before {
+    width:100%;
+  
+  }
+  
+  
+    
+  a:visited {
+      text-decoration: none;
+    }
+  
+  /* content section */
+  .content{
+    grid-area:content;
+    max-width:750px;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  
+  .content img{
+    width: 90%;
+    margin-bottom: 1em;
+    margin-top: 3em;
+    
+  }
+  
+  .content p{
+    margin-top: 30px;
+    text-align: left;
+    font-size:1em;
+    line-height: 1.75rem;
+  }
+  .paragraph2{
+    text-indent: 2em;
+    margin: 0;
+      font-family: roboto;
+  }
+  
+  h2{
+      font-size: medium;
+  }
+  
+  
+  
+  /* grid system for desktop */
+  @media (min-width:1040px){
+    .container{
+      width:100%;
+      height:100vh;
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+            "icon content"
+            "nav content"
+            "nav content"
+            ". content"
+            "footer footer";
+    }
+  
+   
+      nav ul{
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+       
+      }
+  
+      .icon svg {
+        width: 60%;
+        padding-top:30px;
+        padding-bottom: 70px;
+        
+      }
+  
+  
+      .content img{
+        width: 60%;
+        
+      }
+    
+  
+  }
