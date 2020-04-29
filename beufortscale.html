@@ -439,85 +439,27 @@ jJQ+PIp+DJThqDdQosPP3j/4C75kvAAO9Ukt8tf/AWZqiaw=
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      
-
+    
 
       <div class="content">
-
-        <h2> Fun With Paper Cut-outs</h2>
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <img src="/images/Jeremiah with textured paper.jpg" width="400px">
-            </div>
-            
-            <div class="mySlides fade">
-                <video width="400" controls>
-                    <source src="images/Jeremiah-process-video.mp4" type="video/mp4">
-                </video>
-              
-            </div>
-            
-            <!-- <div class="mySlides fade">
-             <img src="/images/wallpaper/3.png" width="400px" >
-            </div>
-             -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <!-- <span class="dot" onclick="currentSlide(3)"></span>  -->
-            </div>
+        <h2>Beaufort Scale Gif</h2>
         
-        <script src="" async defer></script>
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-            </script>
-        
-          
+          <img id="image" src='images/beaufort-gif.gif'/>
+
                    
-        <!-- Description of project -->
-       
+
+        <div class="content">
         <p>
-             <p class="paragraph2"> This greeting card was created as a gift for a friend. I've been working with her grandson for years and she told me a story about how he and the local turkey have a great bond. Using a paper cut-out style I transformed her story into a tangible item. My friend loved this greeting card so much that she hung it up in her dining room for all off her guests to see. </p>
+            <p class="paragraph2">This project is showing the progression of an expression. Using bright colors and solid shapes I created a gif out of seven individual images. </p>
              <br>
              <br>      
-     
+     </div>
 
       
             
           </li>
         </ul>
-      </div>
+      </footer>
+    </div>
   </body>
 </html>

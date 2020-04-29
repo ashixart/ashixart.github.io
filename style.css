@@ -106,7 +106,7 @@ nav a:hover::before {
     grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
     grid-template-rows: auto;
     grid-gap: 30px;
-    padding-top: 200px;
+    padding-top: 100px;
     grid-template-areas:
     ". a b c ."
     ". d e f ."
@@ -116,6 +116,12 @@ nav a:hover::before {
 .box-styling {
     height: 350px;
 }
+
+.box-wrapper{
+  height:350px;
+  border-radius: 12%;
+}
+
 
 .box1 {
     grid-area: a;

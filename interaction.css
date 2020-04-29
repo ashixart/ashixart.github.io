@@ -39,16 +39,21 @@
 .hovereffect h2 {
   text-align: center;
   position: relative;
-  font-size: 1.5em;
   padding: 10px;
-  font-family: 'montseratt';
+  padding-top: 110px;
+  font-size: large;
+  font-family: Montserrat;
+  font-weight: 900;
+
+          
+
   
 }
 
 .hovereffect p {
   display: inline-block;
   text-decoration: none;
-  padding: 7px 14px;
+  padding: 30px;
   margin: 0;
   background-color: transparent;
 }
@@ -63,8 +68,9 @@
   opacity: 0;
   filter: alpha(opacity=0);
   color: black;
-  font-family: 'roboto';
-  font-weight: 200;
+  font-size: large;
+  font-family: Montserrat;
+  font-weight: 900;
   margin-top:60px;
 }
 
