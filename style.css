@@ -107,6 +107,7 @@ nav a:hover::before {
     grid-template-rows: auto;
     grid-gap: 30px;
     padding-top: 100px;
+    padding-bottom: 15%;
     grid-template-areas:
     ". a b c ."
     ". d e f ."
@@ -218,8 +219,8 @@ nav a:hover::before {
      }
 
     .image-gallery {
-        padding-bottom: 200%;
-        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+        padding-bottom: 240%;
+        grid-template-columns: 1fr minmax(350px, 1fr) 1fr;
         grid-template-areas:
         ".a."
         ".b."
